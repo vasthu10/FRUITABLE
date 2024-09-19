@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height:100vh;
+	  	  background-image:url('7718435.jpg');
+      background-repeat:no-repeat;
+	  background-size:cover;
+	  background-position:center;
+      color: #fff;
+    }
+    
+    .card {
+      width: 500px;
+	  background-image:url('delicious-granita-dessert-with-peach.jpg');
+      padding: 20px;
+     background-color:orange;
+      background-repeat:no-repeat;
+	  background-size:cover;
+	  background-position:center;
+      color:#FFD700;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    h2 {
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    
+    button {
+      width: 85%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+	input[type="radio"]
+     {
+      width: 10%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    input[type="text"] {
+      background:#f4dafe;
+      color: #fff;
+    }
+    
+    button {
+      background: #fff;
+      color: #ff4b2b;
+      cursor: pointer;
+    }
+    
+    .payment-icons img {
+      width: 60px;
+      margin-right: 10px;
+	  height:60px;
+	  
+    }
+    
+    .card-images img {
+      width: 60px;
+      margin-right: 10px;
+    }
+    
+    
+    
+    
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Personal Details</h2>
+    <input type="text" placeholder="First Name" id="firstName" required>
+    <input type="text" placeholder="Last Name" id="lastName" required>
+    
+    <h2>Card Details</h2>
+    <input type="text" placeholder="Card Name" id="cardName" required>
+    <input type="text" placeholder="CVV" id="cvv" required>
+    <input type="text" placeholder="Expiry Date" id="expiryDate" required>
+    
+    <h2>Payment Options</h2>
+    <div class="payment-icons">
+      <label>
+        <input type="radio" name="paymentOption" value="gpay">
+        <img src="gpay.png"  alt="Google Pay">
+      </label>
+      <label>
+        <input type="radio" name="paymentOption" value="paytm">
+        <img src="paytm.png" alt="Paytm">
+      </label>
+      <label>
+        <input type="radio" name="paymentOption" value="phonepay">
+        <img src="ppay.png" alt="PhonePe">
+      </label>
+    </div>
+    
+    <h2>Accepted Cards</h2>
+    <div class="card-images">
+      <img src="card.jpg" alt="Visa">
+      <img src="card-2.jpg" alt="RuPay">
+      <img src="card-3.jpg" alt="Paypal">
+    </div>
+    <br>
+    <button onclick="submitForm()">Pay Now</button>
+  </div>
+  
+
+  <script>
+    function submitForm() {
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const cardName = document.getElementById('cardName').value;
+      const cvv = document.getElementById('cvv').value;
+      const expiryDate = document.getElementById('expiryDate').value;
+
+      // Validation and form submission logic can be added here
+      console.log('First Name:', firstName);
+      console.log('Last Name:', lastName);
+      console.log('Card Name:', cardName);
+      console.log('CVV:', cvv);
+      console.log('Expiry Date:', expiryDate);
+
+      const selectedPaymentOption = document.querySelector('input[name="paymentOption"]:checked');
+      if (selectedPaymentOption) {
+        console.log('Payment Option:', selectedPaymentOption.value);
+      } else {
+        console.log('Please select a payment option.');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1332 @@
+<html lang="en">
+<head>
+<title>PROJECT</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>  
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet"href="example bootstrap.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-warning sticky-top"id="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand"style="text-shadow:4px 4px black;font-size:50px;" href="#">FRUITABLES</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link"href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#shop">Shop</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="#shop details">Shop Details</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pages
+          </a>
+          <ul class="dropdown-menu bg-warning">
+            <li><a class="dropdown-item" href="file:///C:/Users/vasthava/Desktop/full%20stack/cart.html">Cart</a></li>
+            <li><a class="dropdown-item" href="file:///C:/Users/vasthava/Desktop/full%20stack/checkout.html">Chackout</a></li>
+            <li><a class="dropdown-item" href="#testimonial">Testimonial</a></li>
+          </ul>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        </ul>
+      </div>
+	  <div class="d-flex m-3 me-0">
+                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-warning"></i></button>
+                            <a href="cart.html" class="position-relative me-4 my-auto"><span id="cart-count">0</span>
+                                <i class="fa fa-shopping-cart fa-2x"></i>
+                                
+                            </a>
+                            <a href="profile.html" class="my-auto">
+                                <i class="fas fa-user text-success fa-2x"></i>
+                            </a>
+                        </div>
+  </div>
+</nav>
+
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="search.html" method="get">
+                        <div class="mb-3">
+                            <label for="searchInput" class="form-label">Enter your search keyword:</label>
+                            <input type="text" class="form-control" id="searchInput" name="query" placeholder="Search...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--Home-->
+<section id="home">
+<div class="container-fluid">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-12 col-lg-7">
+                        <h4 class="mb-3">100% Organic Foods</h4>
+                        <h1 class="mb-5 display-3">Organic Veggies & Fruits Foods</h1>
+                        
+                    </div>
+                    <div class="col-md-12 col-lg-5">
+                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active rounded">
+                                    <img src="vegeta.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                </div>
+                                <div class="carousel-item rounded">
+                                    <img src="fruits.png" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section> 
+<!-- Featurs Section Start -->
+        <div class="container-fluid featurs py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-warning mb-5 mx-auto">
+                                <i class="fas fa-car-side fa-8x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Free Shipping</h5>
+                                <p class="mb-0">Free on order over $300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-warning mb-5 mx-auto">
+                                <i class="fas fa-user-shield fa-8x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Security Payment</h5>
+                                <p class="mb-0">100% security payment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-warning mb-5 mx-auto">
+                                <i class="fas fa-exchange-alt fa-8x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>30 Day Return</h5>
+                                <p class="mb-0">30 day money guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-warning mb-5 mx-auto">
+                                <i class="fa fa-phone-alt fa-8x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>24/7 Support</h5>
+                                <p class="mb-0">Support every time fast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featurs Section End -->
+		<!-- Fruits Shop Start-->
+		<section id="shop">
+        <div class="container-fluid fruite py-5">
+            <div class="container py-5">
+                <div class="tab-class text-center">
+                    <div class="row g-4">
+                        <div class="col-lg-4 text-start">
+                            <h1 style="font-weight:500">Our Organic Products</h1>
+                        </div>
+                        <div class="col-lg-8 text-end">
+                            <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active"style="text-decoration:none" data-bs-toggle="pill" href="#tab-1">
+                                        <span class="text-dark btn btn-outline-warning" style="width: 130px;">All Products</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill"style="text-decoration:none" data-bs-toggle="pill" href="#tab-2">
+                                        <span class="text-dark btn btn-outline-warning" style="width: 130px;">Vegetables</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill"style="text-decoration:none" data-bs-toggle="pill" href="#tab-3">
+                                        <span class="text-dark btn btn-outline-warning" style="width: 130px;">Fruits</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="grapes.jpg"class="img-fluid w-100 rounded-top" alt="">
+													
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Grapes</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="1"data-img="grapes.jpg" data-name="Grapes" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="raspberries.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Raspberries</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="2"data-img="raspberries.jpg" data-name="Raspberries" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="apricots.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apricots</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="3"data-img="apricots.jpg" data-name="Apricots" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="apple.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apple</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="4" data-img="apple.jpg"data-name="Apple" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="pine.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Pine Apple</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="9" data-img="pine.jpg"data-name="Pine Apple" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="jack.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Jack Fruit</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="10" data-img="jack.jpg"data-name="Jack Fruit" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="orange.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Orange</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="11" data-img="orange.jpg"data-name="Orange" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="custard.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Custard</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="12" data-img="custard.jpg"data-name="Custard" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="tomato 3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Tomato</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="5" data-img="tomato 3.jpg"data-name="Tomato" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="onion 2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Onion</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="6" data-img="onion 2.jpg"data-name="Onion" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="chilli.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Chilli</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="7" data-img="chilli.jpg"data-name="Chilli" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="potato.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Potato</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="8" data-img="potato.jpg"data-name="Potato" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="beans.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Beans</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="13" data-img="beans.jpg"data-name="Beans" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="carbage.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Carbage</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="14" data-img="carbage.jpg"data-name="Carbage" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="brinjal.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Brinjal</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="15" data-img="brinjal.jpg"data-name="Brinjal" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="carrot.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Carrot</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="16" data-img="carrot.jpg" data-name="Carrot" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="grapes.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Grapes</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="1" data-img="grapes.jpg"data-name="Grapes" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="raspberries.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Raspberries</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="2" data-img="raspberries.jpg"data-name="Raspberries" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="apricots.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apricots</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="3" data-img="apricots.jpg"data-name="Apricots" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="apple.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apple</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="4" data-img="apple.jpg"data-name="Apple" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="pine.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Pine Apple</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="9" data-img="pine.jpg"data-name="Pine Apple" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="jack.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Jack Fruit</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="10"data-img="jack.jpg" data-name="Jack Fruit" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="orange.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Orange</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="11" data-img="orange.jpg"data-name="Orange" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="custard.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Custard</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="12" data-img="custard.jpg"data-name="Custard" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="tomato 3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Tomato</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="5"data-img="tomato 3.jpg" data-name="Tomato" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="onion 2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Onion</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="6" data-img="onion 2.jpg"data-name="Onion" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="chilli.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Chilli</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="7" data-img="chilli.jpg"data-name="Chilli" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="carrot.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Carrot</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="8" data-img="carrot.jpg"data-name="Carrot" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+										<div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="potato.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Potato</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="13"data-img="potato.jpg" data-name="Potato" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="beans.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Beans</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="14" data-img="beans.jpg"data-name="Beans" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="carbage.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Carbage</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="15" data-name="Carbage" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="brinjal.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Vegetables</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Brinjal</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <button  class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="16" data-img="brinjal.jpg"data-name="Brinjal" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Grapes</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <a href="#" class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apricots</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <a href="#" class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Banana</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <a href="#" class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Raspberries</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <a href="#" class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Oranges</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">50/Kg</p>
+                                                        <a href="#" class="btn btn-outline-warning btn-md-square rounded-pill px-3 text-dark"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+		</section>
+        <!-- Fruits Shop End-->
+		
+		<div class="cont">
+        <aside class="image-section left">
+            <div class="thumbnail 1"style="margin-right:200px" data-big="cauli.jpg"><img src="cauli.jpg" alt="Thumbnail 1"></div><br>
+            <div class="thumbnail 1"style="margin-right:200px" data-big="carrot.jpg"><img src="carrot.jpg" alt="Thumbnail 2"></div><br>
+            <div class="thumbnail 1"style="margin-right:200px" data-big="onion 2.jpg"><img src="onion 2.jpg" alt="Thumbnail 3"></div><br>
+            <div class="thumbnail 1" style="margin-right:200px"data-big="tomato 3.jpg"><img src="tomato 3.jpg" alt="Thumbnail 4"></div><br>
+        </aside>
+        <div id="largeImageContainer">
+            <img id="largeImage" src="cauli.jpg" alt="Large View">
+        </div>
+        <aside class="image-section right">
+            <div class="thumbnail 1"style="margin-left:200px" data-big="brinjal.jpg"><img src="brinjal.jpg" alt="Thumbnail 5"></div><br>
+            <div class="thumbnail 1" style="margin-left:200px"data-big="potato.jpg"><img src="potato.jpg" alt="Thumbnail 6"></div><br>
+            <div class="thumbnail 1"style="margin-left:200px" data-big="carbage.jpg"><img src="carbage.jpg" alt="Thumbnail 7"></div><br>
+            <div class="thumbnail 1" style="margin-left:200px"data-big="chilli.jpg"><img src="chilli.jpg" alt="Thumbnail 8"></div><br>
+        </aside>
+    </div>
+    <div class="bottom-section">
+        <div class="thumbnail 1" data-big="pine.jpg"><img src="pine.jpg" alt="Thumbnail 9"></div>
+        <div class="thumbnail 1" data-big="jack.jpg"><img src="jack.jpg" alt="Thumbnail 10"></div>
+        <div class="thumbnail 1" data-big="apple.jpg"><img src="apple.jpg" alt="Thumbnail 11"></div>
+        <div class="thumbnail 1" data-big="apricots.jpg"><img src="apricots.jpg" alt="Thumbnail 12"></div>
+        <div class="thumbnail 1" data-big="orange.jpg"><img src="orange.jpg" alt="Thumbnail 13"></div>
+        <div class="thumbnail 1" data-big="berry.jpg"><img src="berry.jpg" alt="Thumbnail 14"></div>
+        <div class="thumbnail 1" data-big="raspberries.jpg"><img src="raspberries.jpg" alt="Thumbnail 15"></div>
+        <div class="thumbnail 1" data-big="grapes.jpg"><img src="grapes.jpg" alt="Thumbnail 16"></div>
+    </div>
+		
+		
+		
+		
+		
+		
+
+        <!-- Bestsaler Product Start -->
+		<section id="shop details">
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                    <h1 class="display-4">Bestseller Products</h1>
+                    <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-warning">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="tomato.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5 text-dark">Organic Tomato</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="mb-3 text-dark">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="17" data-img="tomato.jpg"data-name="Organic Tomato" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</button>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-warning">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="potato.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5 text-dark">Organic Potato</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="mb-3 text-dark">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="18" data-name="Organic Potato" data-img="potato.jpg"data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</button>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-warning">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="carrot.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5 text-dark">Carrot</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="mb-3 text-dark">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="19" data-name="Carrot" data-img="carrot.jpg"data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-warning">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="banana.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5 text-dark">Banana</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="mb-3 text-dark">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="20" data-name="Banana"data-img="banana.jpg" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-warning">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="apple 2.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5 text-dark">Apple</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="mb-3 text-dark">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="21" data-name="Apple" data-img="apple 2.jpg"data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-warning">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="grapes.jpg" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5 text-dark">Grapes</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star text-success"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="mb-3 text-dark">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="22" data-name="Grapes" data-img="grapes.jpg"data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="bell papper.jpg" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5 text-dark">Bell Papper</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4 class="mb-3">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="23" data-name="Bell Papper"data-img="bell papper.jpg" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="cauli.jpg" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5 text-dark">Cauliflower</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4 class="mb-3">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="24" data-name="Cauliflower" data-img="cauli.jpg"data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="berry.jpg" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5 text-dark">Strawberry</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4 class="mb-3">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="25" data-name="Strawberry" data-img="berry.jpg"data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="basket.jpg" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5 text-dark">Apples</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4 class="mb-3">50/Kg</h4>
+<button  class="btn btn-outline-danger btn-md-square rounded-pill px-3 text-dark add-to-cart" data-id="26" data-name="Apple Basket" data-img="basket.jpg" data-price="50/Kg"><i class="fa fa-shopping-cart me-2 text-primary"></i> Add to cart</a>       </button>
+                        </div>
+                    </div>
+                     </div>
+        </div>
+		</section>
+        <!-- Bestsaler Product End -->
+		<!-- Fact Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="bg-light p-5 rounded">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users mb-3 text-warning"></i>
+                                <h4 class="text-success">SATISFIED CUSTOMERS</h4>
+                                <h1>1963</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users mb-3 text-warning"></i>
+                                <h4 class="text-success">QUALITY OF SERVICE</h4>
+                                <h1>99%</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users mb-3 text-warning"></i>
+                                <h4 class="text-success">QUALITY CERTIFICATES</h4>
+                                <h1>33</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="counter bg-white rounded p-5">
+                                <i class="fa fa-users mb-3 text-warning"></i>
+                                <h4 class="text-success">AVAILABLE PRODUCTS</h4>
+                                <h1>789</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- Tastimonial Start -->
+		<section id="testimonial">
+    <div class="container-fluid testimonial py-5">
+        <div class="container py-5">
+            <div class="testimonial-header text-center">
+                <h4 class="#81C408">Our Testimonial</h4>
+                <h1 class="display-5 mb-5 text-dark">What Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                    <div class="position-relative">
+                        <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="bottom: 30px; right: 0;"></i>
+                        <div class="mb-4 pb-4 border-bottom border-secondary">
+                            <p class="mb-0">"This service exceeded my expectations! The quality and attention to detail were outstanding. I will definitely be returning for more."</p>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap">
+                            <div class="bg-secondary rounded">
+                                <img src="vasthu.png" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                            </div>
+                            <div class="ms-4 d-block">
+                                <h4 class="text-dark">SREE VASTHAVA</h4>
+                                <p class="m-0 pb-3">Graphic Designer</p>
+                                <div class="d-flex pe-5">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                    <div class="position-relative">
+                        <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="bottom: 30px; right: 0;"></i>
+                        <div class="mb-4 pb-4 border-bottom border-secondary">
+                            <p class="mb-0">"Absolutely amazing experience! The team was professional and delivered exactly what I was looking for. Highly recommend their services."</p>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap">
+                            <div class="bg-secondary rounded">
+                                <img src="naveen.png" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                            </div>
+                            <div class="ms-4 d-block">
+                                <h4 class="text-dark">NAVEEN MSD </h4>
+                                <p class="m-0 pb-3">Software Engineer</p>
+                                <div class="d-flex pe-5">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                    <div class="position-relative">
+                        <i class="fa fa-quote-right fa-2x text-warning position-absolute" style="bottom: 30px; right: 0;"></i>
+                        <div class="mb-4 pb-4 border-bottom border-secondary">
+                            <p class="mb-0">"A fantastic service from start to finish. The team was attentive and made sure all my needs were met. I couldn't be happier with the result."</p>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap">
+                            <div class="bg-secondary rounded">
+                                <img src="testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                            </div>
+                            <div class="ms-4 d-block">
+                                <h4 class="text-dark">Sophia Wilson</h4>
+                                <p class="m-0 pb-3">Marketing Specialist</p>
+                                <div class="d-flex pe-5">
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star text-success"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Tastimonial End -->
+		<!-- Footer Start -->
+		<section id="contact"
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#"style="text-decoration:none">
+                                <h1 class="text-success mb-0" >Fruitables</h1>
+                                <p class="text-warning mb-0">Fresh products</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mx-auto">
+                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                                <button onclick="window.location='suscription.html'"type="submit" class="btn btn-success border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex justify-content-end pt-3">
+                                <a class="btn  btn-outline-warning me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-warning me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-warning me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-warning btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Why People Like us!</h4>
+                            <p class="mb-4">typesetting, remaining essentially unchanged. It was 
+                                popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Shop Info</h4>
+                            <a class="btn-link"style="text-decoration:none" href="">About Us</a>
+                            <a class="btn-link"style="text-decoration:none" href="">Contact Us</a>
+                            <a class="btn-link"style="text-decoration:none" href="">Privacy Policy</a>
+                            <a class="btn-link"style="text-decoration:none" href="">Terms & Condition</a>
+                            <a class="btn-link"style="text-decoration:none" href="">Return Policy</a>
+                            <a class="btn-link"style="text-decoration:none" href="">FAQs & Help</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Account</h4>
+                            <a class="btn-link"style="text-decoration:none" href="">My Account</a>
+                            <a class="btn-link"style="text-decoration:none" href="">Shop details</a>
+                            <a class="btn-link" style="text-decoration:none"href="">Shopping Cart</a>
+                            <a class="btn-link" style="text-decoration:none"href="">Wishlist</a>
+                            <a class="btn-link" style="text-decoration:none"href="">Order History</a>
+                            <a class="btn-link" style="text-decoration:none"href="">International Orders</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>Address: 1429 Netus Rd, NY 48247</p>
+                            <p>Email: Example@gmail.com</p>
+                            <p>Phone: +0123 4567 8910</p>
+                            <p>Payment Accepted</p>
+                            <img src="card.jpg" style="height:60px;width:60px;margin-right:10px">
+                            <img src="card-2.jpg" style="height:60px;width:60px;margin-right:10px">
+                            <img src="card-3.jpg" style="height:60px;width:60px;margin-right:10px">
+                            <img src="card-4.jpg" style="height:60px;width:60px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-warning border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up "></i></a>   
+
+     
+    </section>
+	<script>
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const id = this.dataset.id;
+            const name = this.dataset.name;
+            const price = parseFloat(this.dataset.price);
+			const imageUrl = this.dataset.img;
+            
+            const cartItem = { id, name, price, quantity: 1 , imageUrl};
+            
+            let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+            
+            const index = cart.findIndex(item => item.id === id);
+            if (index !== -1) {
+                cart[index].quantity += 1;
+            } else {
+                cart.push(cartItem);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+        });
+        });
+ document.addEventListener('DOMContentLoaded', () => {
+    const cartCountElement = document.getElementById('cart-count');
+    let cartCount = 0;
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            cartCount++;
+            cartCountElement.textContent = cartCount;
+        });
+    });
+});   
+	
+
+
+$(document).ready(function() {
+    $('.thumbnail').click(function() {
+        var bigImageSrc = $(this).data('big');
+        $('#largeImage').attr('src', bigImageSrc);
+    });
+});
+	</script>
+    </body>
+
+</html>
+		
+
+        

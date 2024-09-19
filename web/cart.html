@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('patrick-fore-hoxqcGUheeo-unsplash.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly visible background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .cart-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .cart-item .text-section {
+            flex: 1;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+        .cart-item .image-section {
+            flex-shrink: 0;
+            margin-left: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cart-item .image-section img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .cart-item:hover .image-section img {
+            transform: scale(1.1);
+        }
+        .remove-item {
+            transition: background-color 0.3s ease;
+        }
+        .remove-item:hover {
+            background-color: #c82333;
+            color: #fff;
+        }
+        .total {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .btn-danger {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-danger:hover {
+            background-color: #d9534f;
+            transform: scale(1.05);
+        }
+        .empty-cart-message {
+            color: #c82333;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-controls button {
+            margin: 0 5px;
+        }
+        .quantity {
+            min-width: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center mb-4" style="color:#FFD700">Shopping Cart</h2>
+    <div class="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="total mt-3">
+        <h4>Total: Rs/<span id="total-amount">0.00</span></h4>
+    </div>
+    <button class="btn btn-danger mt-3" onclick="clearCart()">Clear Cart</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    const cartContainer = document.querySelector('.cart-items');
+    const totalAmount = document.getElementById('total-amount');
+    
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty</p>';
+    } else {
+        cart.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('cart-item', 'border', 'p-3');
+            itemElement.innerHTML = `
+                <div class="text-section">
+                    <h5>${item.name}</h5>
+                    <p>Price: Rs ${item.price}</p>
+                    <div class="quantity-controls">
+                        <button class="btn btn-outline-dark btn-sm decrement" data-id="${item.id}">-</button>
+                        <span class="quantity" id="quantity-${item.id}">${item.quantity}</span>
+                        <button class="btn btn-outline-dark btn-sm increment" data-id="${item.id}">+</button>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <img src="${item.imageUrl}" alt="${item.name}" class="img-thumbnail">
+                </div>
+                <button class="btn btn-danger btn-sm remove-item" data-id="${item.id}">Remove</button>
+            `;
+            cartContainer.appendChild(itemElement);
+
+            total += item.price * item.quantity;
+        });
+
+        totalAmount.textContent = total.toFixed(2);
+
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.dataset.id;
+                removeItemFromCart(id);
+            });
+        });
+
+        document.querySelectorAll('.increment').forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.dataset.id;
+                updateItemQuantity(id, 1);
+            });
+        });
+
+        document.querySelectorAll('.decrement').forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.dataset.id;
+                updateItemQuantity(id, -1);
+            });
+        });
+    }
+});
+
+function updateItemQuantity(id, change) {
+    let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    const index = cart.findIndex(item => item.id === id);
+
+    if (index !== -1) {
+        cart[index].quantity += change;
+
+        if (cart[index].quantity <= 0) {
+            cart.splice(index, 1);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.reload(); // Reload to update the UI
+    }
+}
+
+function removeItemFromCart(id) {
+    let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    cart = cart.filter(item => item.id !== id);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    location.reload(); // Reload to update the UI
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    location.reload(); // Reload to update the UI
+}
+
+</script>
+</body>
+</html>

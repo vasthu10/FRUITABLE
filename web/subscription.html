@@ -1,0 +1,378 @@
+<html>
+<head> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<style>
+
+
+$font-size:16px;
+body{
+display:flex;
+}
+.container{
+
+  display: flex;
+  margin-left:80px;
+  margin-top:50px;
+  gap:60px;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
+  
+ 
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+  width: 350px;
+  text-align: center;
+  margin-left: 2em;
+  margin-top: 2em;
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .card-top{
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.5em;
+    min-height: 200px;
+    padding-bottom: 0.5em;
+    
+    span{
+      color: #fafafa;
+      font-size: 0.6em;
+      padding-top: 1em;
+    }
+  }
+  
+  .background-purple {
+    background: rgb(95,35,174);
+    background: linear-gradient(45deg, rgba(95,35,174,1) 0%, rgba(132,64,190,1) 50%, rgba(200,109,215,1) 100%);
+  }
+  
+  .background-red {
+    background: rgb(175,19,16);
+    background: linear-gradient(45deg, rgba(175,19,16,1) 0%, rgba(222,58,55,1) 50%, rgba(255,68,65,1) 100%);
+  }
+  
+  .background-teal{
+   background: rgb(27,139,119);
+background: linear-gradient(45deg, rgba(27,139,119,1) 0%, rgba(56,189,166,1) 50%, rgba(96,230,192,1) 100%);
+  }
+  
+  h3{
+    font-size: $font-size*1.75;
+    font-weight: 400;
+    margin: 0;
+    padding: 2rem 0 0;
+  }
+  
+  i{
+    font-size: 90;
+    padding: 1.25rem 0 0;
+  }
+  
+  .card-tagline {
+    font-size: $font-size*1.25;
+    margin: 0;
+    padding: 1.25rem 0 0;
+  }
+  
+  .card-subtag{
+    color: hsla(100%, 100%, 100%, 0.9); 
+    font-size: $font-size*0.75;
+  }
+  span {
+    display: block;
+    width: 100%;
+  }
+  
+  .option-list {
+    background-color: #F4F4F4;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0em 0;
+    margin: 0;
+    width: 100%;    
+    
+    .option {
+      border: solid 2px hsla(240, 23%, 97%, 0);
+      padding: 1em;
+      padding-bottom: 0.5em;
+      position: relative;
+      width: calc(1/3 * 100%);  
+    }
+    
+     .highlight-blue{
+        border: 2px solid blue;
+        box-shadow: 0px 0px 10px blue;
+        margin: 0; 
+         
+        span {
+           color: blue;
+        }
+         
+         .savings {
+           color: lighten(blue, 15%);
+         }
+      
+      .pill {
+        background-color: red;
+        border-radius: 20px;
+        box-shadow: 0px 0px 25px blue;
+        color: #fff;
+        display: block;
+        line-height: 1.5em;
+        font-size: 0.75em;
+        position: absolute;
+        top: -10px;
+        margin: 0 auto;
+        width: 75%;}
+      } 
+    
+    .highlight-red {
+        border: 2px solid $red-highlight;
+        box-shadow: 0px 0px 10px $red-highlight;
+        margin: 0; 
+         
+        span {
+           color: $red-highlight;
+        }
+         
+         .savings {
+           color: lighten($red-highlight, 15%);
+         }
+      
+      .pill {
+        background-color: $red-highlight;
+        border-radius: 20px;
+        box-shadow: 0px 0px 25px $red-highlight;
+        color: #fff;
+        display: block;
+        line-height: 1.5em;
+        font-size: 0.75em;
+        position: absolute;
+        top: -10px;
+        margin: 0 auto;
+        width: 75%;
+        } 
+    }
+    
+    .highlight-green {
+        border: 2px solid $green-highlight;
+        box-shadow: 0px 0px 10px $green-highlight;
+        margin: 0; 
+         
+        span {
+           color: $green-highlight;
+        }
+         
+         .savings {
+           color: lighten($green-highlight, 15%);
+}
+      
+      .pill {
+        background-color: $green-highlight;
+        border-radius: 20px;
+        box-shadow: 0px 0px 25px $green-highlight;
+        color: #fff;
+        display: block;
+        line-height: 1.5em;
+        font-size: 0.75em;
+        position: absolute;
+        top: -10px;
+        margin: 0 auto;
+        width: 75%;
+        } 
+    }
+    
+    .popular {
+      display: none;
+    }
+    
+    .number {
+      font-size: 2em;
+    }
+    
+    .time-frame {
+      font-size: 0.75em;
+    }
+    
+    .cost {
+      font-size: 0.75em;
+      font-weight: 800;
+    }
+    
+    .savings {
+      font-size: 0.75em;
+      padding: 0.5em 0 0;
+    }
+  } 
+  
+  .cta{
+    padding: 1em 0;
+   
+	
+    
+    .btn {
+      border-radius: 25px;
+      box-shadow: 0px 0px 25px #c6c6c6;
+      color: #fff;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0;
+      text-decoration: none;
+      width: 75%;
+    }
+    
+    .btn-purple {
+      background: #FFD700;
+      background-size: 150% auto;
+      background-position: 31% 0;
+      transition: background-position 0.4s;
+      
+      &:hover{
+background-position: 100% 0;
+        }
+    }
+    
+    .decline {background-position: 100% 0;
+        }
+    }
+    
+    .decline {
+      color: cyan;
+      font-weight: 700;
+      display: block;
+      padding: 1em 0 0;
+      margin: auto;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      width: 40%;
+      
+        &:hover{
+          color: #FFD700;
+        }
+    }
+}
+}
+</style>
+</head>
+<body style="background-image:url('delicious-granita-dessert-with-grapefruit.jpg');background-repeat:no-repeat;
+	  background-size:cover;
+	  background-position:center;">
+<div class="container">
+  
+  <div class="card">
+    <div class="card-top background-purple">
+      <h3>WEEKLY OFFER</h3>
+      <i aria-hidden class="fas fa-heart"></i>
+       <p class="card-tagline">Deliver Charge Free</p>
+      <p class="card-subtag">Super Fast Delivery</p>
+    </div>
+    <div class="options">
+      <ul class="option-list">
+        <li class="option">
+            <span class="number">1</span>
+            <span class="time-frame">week</span>
+            <span class="cost">Rs.100/week</span>
+        </li>
+        <li class="option highlight-blue">
+            <span class="pill">Super Popular</span>
+            <span class="number">2</span>
+            <span class="time-frame">weeks</span>
+            <span class="cost">Rs.200/week</span>
+            <span class="savings">25% Savings</span>
+        </li>
+        <li class="option">
+            <span class="number">3</span>
+            <span class="time-frame">week</span>
+            <span class="cost">Rs.300/week</span>
+        </li>
+      </ul>
+    </div>
+    <div class="cta">
+      <a class="btn btn-purple" href="sub.html">Subscribe</a>
+      <a class="decline" href="bootstrap.html">No thanks</a>
+    </div>
+  </div>
+<div class="card">
+    <div class="card-top background-red">
+      <h3>MONTHLY OFFER</h3>
+      <i aria-hidden class="fas fa-heart"></i>
+       <p class="card-tagline">Deliver Charge Free</p>
+      <p class="card-subtag">Super Fast Delivery</p>
+    </div>
+    <div class="options">
+      <ul class="option-list">
+        <li class="option">
+            <span class="number">1</span>
+            <span class="time-frame">month</span>
+            <span class="cost">Rs.400/month</span>
+        </li>
+        <li class="option highlight-blue">
+            <span class="pill">Super Popular</span>
+            <span class="number">3</span>
+            <span class="time-frame">months</span>
+            <span class="cost">Rs.1000/month</span>
+            <span class="savings">25% Savings</span>
+        </li>
+        <li class="option">
+            <span class="number">6</span>
+            <span class="time-frame">months</span>
+            <span class="cost">Rs.1800/month</span>
+        </li>
+      </ul>
+    </div>
+    <div class="cta">
+      <a class="btn btn-purple" href="sub.html">Subscribe</a>
+      <a class="decline" href="bootstrap.html">No thanks</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-top background-teal">
+      <h3>YEARLY OFFER</h3>
+      <i aria-hidden class="fas fa-heart"></i>
+      <p class="card-tagline">Deliver Charge Free</p>
+      <p class="card-subtag">Super Fast Delivery</p>
+    </div>
+    <div class="options">
+      <ul class="option-list">
+        <li class="option">
+            <span class="number">1</span>
+            <span class="time-frame">year</span>
+            <span class="cost">Rs.2500/year</span>
+        </li>
+        <li class="option highlight-blue">
+            <span class="pill">Super Popular</span>
+            <span class="number">3</span>
+            <span class="time-frame">years</span>
+            <span class="cost">Rs.4000/year</span>
+            <span class="savings">25% Savings</span>
+        </li>
+        <li class="option">
+            <span class="number">6</span>
+            <span class="time-frame">years</span>
+            <span class="cost">Rs.6000/year</span>
+        </li>
+      </ul>
+    </div>
+    <div class="cta">
+      <a class="btn btn-purple" href="sub.html">Subscribe</a>
+      <a class="decline" href="bootstrap.html">No thanks</a>
+    </div>
+  </div>
+  
+</div>
+
+
+</body>
+</html>

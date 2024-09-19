@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-image: url('fff.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Fixed background image */
+            color: #333; /* Default text color */
+        }
+
+        .profile-page {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .profile-card {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            transition: border-bottom 0.3s;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .profile-email,
+        .profile-phone {
+            color: #666;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .profile-sections {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .section-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: calc(42% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .section-card i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .section-card span {
+            font-size: 16px;
+        }
+
+        .section-card:hover {
+            background-color: #e9e9e9;
+            cursor: pointer;
+        }
+
+        .section-details {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Dark Theme Styles */
+        body.dark-theme {
+            color: #fff; /* Change all text color to white in dark theme */
+        }
+
+        body.dark-theme a,
+        body.dark-theme p,
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6 {
+            color: #fff; /* Ensure all text elements are white in dark theme */
+        }
+
+        .profile-page.dark-theme {
+            background-color: rgba(68, 68, 68, 0.9); /* Darker semi-transparent background */
+        }
+
+        .profile-card.dark-theme {
+            border-bottom: 1px solid #555;
+        }
+
+        .section-card.dark-theme {
+            background-color: #555;
+            color: #ddd;
+        }
+
+        .section-card.dark-theme i {
+            color: #1e90ff;
+        }
+
+        .section-card.dark-theme:hover {
+            background-color: #666;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Switch to Dark Theme</button>
+
+    <div class="profile-page">
+        <div class="profile-card">
+            <img src="profile.jpg" alt="Profile Image" class="profile-image">
+            <h2 class="profile-name">Sreevasthava K K</h2>
+            <p class="profile-email"><i class="fas fa-envelope"></i> vasthu@example.com</p>
+            <p class="profile-phone"><i class="fas fa-phone"></i> +1234567890</p>
+        </div>
+        <div class="profile-sections">
+            <div class="section-card">
+                <i class="fas fa-heart"></i>
+                <span>Favourites</span>
+                <p class="section-details">Check out your favourite items and lists.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Money</span>
+                <p class="section-details">View and manage your funds and transactions.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-user-circle"></i>
+                <span>Your Profile</span>
+                <p class="section-details">Update your profile information and settings.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-star"></i>
+                <span>Your Rating</span>
+                <p class="section-details">See your ratings and feedback from others.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-box"></i>
+                <span>Your Orders</span>
+                <p class="section-details">Review your past orders and current statuses.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-heart"></i>
+                <span>Favourite Orders</span>
+                <p class="section-details">Access orders that you’ve marked as favourites.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-tag"></i>
+                <span>Your Deals</span>
+                <p class="section-details">Find deals and discounts available for you.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-gift"></i>
+                <span>Rewards</span>
+                <p class="section-details">View your accumulated rewards and benefits.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-wallet"></i>
+                <span>Wallet</span>
+                <p class="section-details">Manage your wallet and view your balance.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-credit-card"></i>
+                <span>Payment Settings</span>
+                <p class="section-details">Update your payment methods and settings.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Coupons</span>
+                <p class="section-details">Access and manage your available coupons.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-language"></i>
+                <span>Choose Language</span>
+                <p class="section-details">Select your preferred language for the app.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+                <p class="section-details">Learn more about our platform and services.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-comment-alt"></i>
+                <span>Send Feedback</span>
+                <p class="section-details">Provide your feedback and suggestions.</p>
+            </div>
+            <div class="section-card">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+                <p class="section-details">Configure your account settings and preferences.</p>
+            </div>
+            <div class="section-card" onclick="document.location='login.html'">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+                <p class="section-details">Log out from your current session.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle theme function
+        function toggleTheme() {
+            const body = document.body;
+            const profilePage = document.querySelector('.profile-page');
+            const profileCard = document.querySelector('.profile-card');
+            const sectionCards = document.querySelectorAll('.section-card');
+            const isDarkTheme = body.classList.toggle('dark-theme');
+
+            // Update theme toggle button text based on theme
+            document.querySelector('.theme-toggle').textContent = isDarkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme';
+
+            // Apply dark theme to profile page and section cards
+            profilePage.classList.toggle('dark-theme', isDarkTheme);
+            profileCard.classList.toggle('dark-theme', isDarkTheme);
+            sectionCards.forEach(card => card.classList.toggle('dark-theme', isDarkTheme));
+        }
+    </script>
+</body>
+</html>
